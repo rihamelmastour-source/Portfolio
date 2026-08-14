@@ -9,57 +9,84 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background: #f7f8fa;
-            color: #222;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
         }
-        header {
-            background: #111827;
-            color: white;
-            padding: 70px 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 20px;
-            color: #d1d5db;
-        }
+        /* Navigation */
         nav {
-            background: white;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
             position: sticky;
             top: 0;
+            z-index: 1000;
+            background: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+            border-bottom: 1px solid #e2e8f0;
         }
         nav a {
-            color: #222;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            color: #334155;
+            font-weight: 600;
         }
         nav a:hover {
             color: #2563eb;
         }
-        section {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 20px;
+        /* Hero */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 8%;
+            background: white;
         }
-        h2 {
-            font-size: 28px;
+        .hero-content {
+            max-width: 1000px;
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+        .profile-photo {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #e2e8f0;
+        }
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+        .hero-text h2 {
+            font-size: 22px;
+            font-weight: 500;
+            color: #2563eb;
             margin-bottom: 20px;
-            color: #111827;
         }
-        .about {
+        .hero-text p {
+            max-width: 650px;
+            color: #64748b;
             font-size: 17px;
         }
+        /* Sections */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 8%;
+        }
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #0f172a;
+        }
+        /* Skills */
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -67,42 +94,77 @@
         }
         .skill {
             background: white;
-            padding: 10px 18px;
+            border: 1px solid #e2e8f0;
+            padding: 12px 20px;
             border-radius: 8px;
-            border: 1px solid #ddd;
+            font-weight: 500;
         }
+        /* Projects */
         .project {
             background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            border: 1px solid #ddd;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s ease;
+        }
+        .project:hover {
+            transform: translateY(-4px);
         }
         .project h3 {
-            margin-bottom: 12px;
-            color: #111827;
+            font-size: 21px;
+            margin-bottom: 15px;
+            color: #0f172a;
         }
         .project p {
-            margin-bottom: 10px;
+            color: #64748b;
+            margin-bottom: 12px;
         }
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 60px;
+        .project strong {
+            color: #2563eb;
         }
+        /* Contact */
         .contact a {
             color: #2563eb;
             text-decoration: none;
+            font-weight: 600;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #0f172a;
+            color: white;
+        }
+        /* Mobile */
+        @media (max-width: 700px) {
+            nav {
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            .hero {
+                text-align: center;
+            }
+            .hero-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            .hero-text h2 {
+                font-size: 19px;
+            }
+            .profile-photo {
+                width: 180px;
+                height: 180px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Riham El Mastour</h1>
-        <p>2nd Year Computer Science Student | Interested in Data & Technology</p>
-    </header>
+    <!-- Navigation -->
     <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -110,14 +172,35 @@
         <a href="#goals">Goals</a>
         <a href="#contact">Contact</a>
     </nav>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <img src="Profile.jpg" alt="Riham El Mastour" class="profile-photo">
+            <div class="hero-text">
+                <h1>Riham El Mastour</h1>
+                <h2>
+                    2nd Year Computer Science Student |
+                    Interested in Data & Technology
+                </h2>
+                <p>
+                    I'm a second-year Computer Science student interested in
+                    data and technology. I'm currently developing my technical
+                    skills through academic projects, internship experience,
+                    and personal learning.
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- About -->
     <section id="about">
         <h2>About Me</h2>
-        <p class="about">
-            I'm a second-year Computer Science student interested in data and technology.
-            I'm currently developing my technical skills through academic projects,
-            internship experience, and personal learning.
+        <p>
+            I am currently pursuing my studies in Computer Science and
+            continuously developing my technical knowledge through academic
+            projects and practical experiences.
         </p>
     </section>
+    <!-- Skills -->
     <section id="skills">
         <h2>Technical Skills</h2>
         <div class="skills">
@@ -129,18 +212,19 @@
             <div class="skill">Power BI</div>
         </div>
     </section>
+    <!-- Projects -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
             <h3>Employee Travel Request Digitalization System</h3>
             <p>
-                Designed and developed a web application to digitalize the management
-                of employee travel requests.
+                Designed and developed a web application to digitalize
+                the management of employee travel requests.
             </p>
             <p>
-                The application allows administrators to manage travel requests
-                and employees to easily access and view their information
-                through a user-friendly interface.
+                The application allows administrators to manage travel
+                requests and employees to easily access and view their
+                information through a user-friendly interface.
             </p>
             <strong>Internship Project — ISICOD</strong>
         </div>
@@ -153,14 +237,16 @@
             <strong>Introduction to Machine Learning</strong>
         </div>
     </section>
+    <!-- Goals -->
     <section id="goals">
         <h2>Goals</h2>
-        <p class="about">
+        <p>
             To continuously develop my skills in data and technology,
-            gain practical experience through projects, and explore different
-            areas of the field throughout my academic journey.
+            gain practical experience through projects, and explore
+            different areas of the field throughout my academic journey.
         </p>
     </section>
+    <!-- Contact -->
     <section id="contact">
         <h2>Contact</h2>
         <p class="contact">
