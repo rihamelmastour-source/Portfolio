@@ -1,38 +1,32 @@
-# GESTDEP
+# Employee Travel Request Digitalization System
 
-Application de Gestion des Déplacements Professionnels.
+## Project Description
+
+Designed and developed a web application to digitalize the management of employee travel requests.
+
+The application allows administrators to manage travel requests and employees to easily access and view their information through a user-friendly interface.
+
+## Context
+
+This project was developed during my internship at ISICOD.
+
+## Objective
+
+The main objective of the project was to simplify and digitalize the management of employee travel requests through a web-based application.
 
 ## Technologies
 
-- PHP 8
-- MySQL
-- PDO
-- HTML5
-- CSS3
-- Font Awesome
-- Javascript
+* HTML
+* CSS
+* JavaScript
+* PHP
+* SQL
+* XAMPP
 
-## Installation
+## Requirements
 
-1. Copier le dossier GESTDEP dans htdocs.
-2. Démarrer Apache et MySQL avec XAMPP.
-3. Créer la base de données `gestdep`.
-4. Importer `database/gestdep.sql`.
-5. Ouvrir :
+This project uses XAMPP to run the PHP application and manage the SQL database locally.
 
-http://localhost/GESTDEP
+## What I Learned
 
-
-## Fonctionnalités
-
-- Authentification
-- Gestion des utilisateurs
-- Gestion des déplacements
-- Validation
-- Signature électronique  avec photo
-- Notifications
-- Historique
-- Impression
-- Statistiques
-- Profil
-- Paramètres
+Through this project, I developed my practical skills in web development, database management, and building a user-friendly web application.
