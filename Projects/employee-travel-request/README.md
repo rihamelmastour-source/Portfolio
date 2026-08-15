@@ -13,6 +13,9 @@ This project was developed during my internship at ISICOD.
 ## Objective
 
 The main objective of the project was to simplify and digitalize the management of employee travel requests through a web-based application.
+The project uses a SQL database for data management.
+The project uses a SQL database for data management.
+
 
 ## Technologies
 
@@ -22,6 +25,7 @@ The main objective of the project was to simplify and digitalize the management 
 * PHP
 * SQL
 * XAMPP
+* phpMyAdmin
 
 ## Requirements
 
